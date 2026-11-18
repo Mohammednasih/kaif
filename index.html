@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mohammad Alnaz &amp; Fathimath Noora | Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Pinyon+Script&family=Great+Vibes&display=swap" rel="stylesheet">
+     <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <!-- Confetti Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script>
+        window.onerror = function (msg, url, lineNo, columnNo, error) {
+            alert("Error: " + msg + " (Line " + lineNo + ")");
+            return false;
+        };
+    </script>
+
+    <!-- SEO & General Meta Tags -->
+    <meta name="description" content="With great joy and happiness, we cordially invite you to the Wedding of Mohammad Alnaz &amp; Fathimath Noora.">
+
+    <!-- ============================================================== -->
+    <!-- VERCEL URL PLACEHOLDER:                                        -->
+    <!-- Replace 'https://temp-6-bf.vercel.app' below with your actual  -->
+    <!-- deployed Vercel domain (e.g., https://your-wedding.vercel.app) -->
+    <!-- ============================================================== -->
+
+    <!-- Open Graph (WhatsApp, Instagram, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mohammad Alnaz &amp; Fathimath Noora Wedding">
+    <meta property="og:url" content="https://risly-safwan.vercel.app/">
+    <meta property="og:title" content="Wedding Invitation | Mohammad Alnaz &amp; Fathimath Noora">
+    <meta property="og:description" content="With great joy and happiness, we cordially invite you to the Wedding of Mohammad Alnaz &amp; Fathimath Noora.">
+    <meta property="og:image" content="https://risly-safwan.vercel.app/assests/images/kf.png">
+    <meta property="og:image:secure_url" content="https://risly-safwan.vercel.app/assests/images/kf.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="736">
+    <meta property="og:image:height" content="511">
+    <meta property="og:image:alt" content="Wedding Invitation - Mohammad Alnaz &amp; Fathimath Noora">
+
+    <!-- Twitter / Instagram Direct Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://risly-safwan.vercel.app/">
+    <meta name="twitter:title" content="Wedding Invitation | Mohammad Alnaz &amp; Fathimath Noora">
+    <meta name="twitter:description" content="With great joy and happiness, we cordially invite you to the Wedding of Mohammad Alnaz &amp; Fathimath Noora.">
+    <meta name="twitter:image" content="https://risly-safwan.vercel.app/assests/images/kf.png">
+
+    <!-- Favicon / App Icon -->
+    <link rel="icon" type="image/png" href="assests/images/kf.png">
+    <link rel="apple-touch-icon" href="assests/images/kf.png">
+</head>
+
+<body>
+    <audio id="bgMusic" loop>
+        <source src="assests/audio/music1.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicToggle" class="music-toggle" aria-label="Toggle music">
+        <iconify-icon icon="lucide:volume-x" id="musicIcon" style="font-size: 20px; color: var(--text-primary); display: flex; align-items: center; justify-content: center;"></iconify-icon>
+    </button>
+
+    <section class="hero-section">
+        <div class="video-container">
+
+      <img id="videoPoster"
+         src="assests/images/first.png"
+         class="video-placeholder">
+
+    <video id="curtainVideo" playsinline webkit-playsinline preload="auto" muted>
+        <source src="assests/videos/nadavd.mp4" type="video/mp4">
+    </video>
+    <video id="followupVideo" class="followup-video" playsinline webkit-playsinline preload="auto" loop>
+        <source src="assests/videos/2.mp4" type="video/mp4">
+    </video>
+    <canvas id="transitionFrame" class="transition-frame"></canvas>
+
+    <div id="followupContent" class="followup-content" aria-hidden="true">
+        <div class="followup-copy">
+            <p class="small-text followup-kicker">TOGETHER WITH<br>THEIR FAMILIES</p>
+            <h1 class="names followup-names" style="font-family: 'Alex Brush', cursive; text-transform: capitalize;">Mohammad Alnaz<br><span class="ampersand">-♡-</span><br>Fathimath Noora</h1>
+            <p class="small-text followup-invitation">WITH GREAT JOY AND HAPPINESS,<br>WE CORDIALLY INVITE YOU<br>TO THE WEDDING CELEBRATIONS</p>
+        </div>
+        <div class="scroll-indicator-container followup-scroll">
+            <div class="scroll-indicator-bar"></div>
+            <span class="scroll-indicator-text">scroll</span>
+        </div>
+    </div>
+
+    <div id="playOverlay" class="overlay">
+        <div class="play-button">
+            <iconify-icon icon="majesticons:hand-click-line" class="hand-icon"></iconify-icon>
+        </div>
+        <p class="tap-text">Open Invitation</p>
+    </div>
+
+</div>
+
+    <div class="page-divider" aria-hidden="true">
+        <img src="assests/images/divider.png" alt="">
+    </div>
+
+    </section>
+
+    <!-- Next Page Section -->
+    
+<!-- SECOND PAGE: WEDDING INVITATION -->
+<section class="details-section" id="detailsSection">
+
+    <div class="details-luxury">
+
+        <!-- Divine Blessing -->
+        <div class="bismillah-block scroll-animate">
+            <img src="assests/images/bismi.png" alt="Bismillah" class="bismillah-img" style="width: clamp(180px, 55vw, 240px); max-width: 85%; height: auto; margin: 0 auto 14px; display: block; mix-blend-mode: screen;">
+            <p style="font-family: 'Cinzel', serif; font-size: 0.95rem; font-weight: 600; color: #dfb776; letter-spacing: 2px; margin-bottom: 4px;">In the name of Almighty,</p>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 0.9rem; letter-spacing: 1px; color: #ead4ad; font-style: italic;">the most beneficent, the most merciful</p>
+        </div>
+
+        <!-- Host / Inviter -->
+        <div class="host-block scroll-animate" style="margin-bottom: 22px; text-align: center;">
+            <p class="host-name" style="font-family: 'Cinzel', serif; font-size: clamp(0.92rem, 3.5vw, 1.15rem); font-weight: 700; color: #dfb776; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; line-height: 1.45;">
+                Mrs. Beefathima &amp; Late Aboobacker Haji Chippar
+            </p>
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; color: #fff8e9; line-height: 1.6; margin-bottom: 5px;">
+                BAITHUL NOOR, AGARTHIMOOLA BEKUR-671322
+            </p>
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 0.75rem; letter-spacing: 1.5px; color: #ead4ad; font-weight: 600;">
+                Mob : <a href="tel:9895925662" style="color: #dfb776; text-decoration: none;">9895925662</a>
+            </p>
+        </div>
+
+        <!-- Invitation introduction -->
+        <div class="details-intro scroll-animate" style="max-width: 380px; margin: 0 auto 22px;">
+            <p style="font-family: 'Cinzel', serif; font-size: 0.72rem; letter-spacing: 2px; line-height: 1.85; text-transform: uppercase; color: #ead4ad;">
+                I hereby cordially invite your esteemed presence with family on the auspicious occasion of the wedding ceremony of my son
+            </p>
+        </div>
+
+        <!-- Groom -->
+        <div class="person-block groom-block scroll-animate">
+            <span class="person-role" style="font-family: 'Montserrat', sans-serif; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: #dfb776; display: block; margin-bottom: 6px;">Groom</span>
+            <div class="person-name" style="font-family: 'Alex Brush', cursive; font-size: clamp(2.7rem, 8.5vw, 3.5rem); color: #fff8e9; margin-bottom: 6px; text-transform: capitalize;">Mohammad Alnaz</div>
+
+            <p class="person-parents" style="font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; letter-spacing: 0.5px; color: #ead4ad; line-height: 1.5;">
+                Grand S/o. Late Baduvan Kunhi Chippar &amp; Late Aboobacker Shiriya
+            </p>
+        </div>
+
+        <!-- With -->
+        <div class="with-divider scroll-animate">
+            <span></span>
+            <p style="font-family: 'Great Vibes', cursive; font-size: 1.8rem; color: #dfb776;">With</p>
+            <span></span>
+        </div>
+
+        <!-- Bride -->
+        <div class="person-block bride-block scroll-animate">
+            <span class="person-role" style="font-family: 'Montserrat', sans-serif; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: #dfb776; display: block; margin-bottom: 6px;">Bride</span>
+            <div class="person-name" style="font-family: 'Alex Brush', cursive; font-size: clamp(2.7rem, 8.5vw, 3.5rem); color: #fff8e9; margin-bottom: 6px; text-transform: capitalize;">Fathimath Noora</div>
+
+            <p class="person-parents" style="font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; letter-spacing: 0.5px; color: #fff8e9; line-height: 1.5; margin-bottom: 4px;">
+                D/o. Mr. Abdul Basheer &amp; Mrs. Asiya Sakina
+            </p>
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 0.95rem; letter-spacing: 0.5px; color: #ead4ad; line-height: 1.4; margin-bottom: 6px;">
+                Grand D/o. Late. AA Hameed Haji &amp; Late. Ahmad Kunhi
+            </p>
+            <p class="person-address" style="font-family: 'Montserrat', sans-serif; font-size: 0.7rem; letter-spacing: 1.5px; text-transform: uppercase; color: #dfb776; opacity: 0.95;">
+                Dar-Us-Sukoon, Sankesh, Natekal-575023
+            </p>
+        </div>
+
+        <div class="details-intro scroll-animate" style="margin-top: 24px; margin-bottom: 12px;">
+            <p style="font-family: 'Cinzel', serif; font-size: 1.15rem; letter-spacing: 3px; font-weight: 600; text-transform: uppercase; color: #dfb776;">
+                Insha Allah
+            </p>
+        </div>
+
+        <!-- Bottom ornament -->
+        <img
+            src="assests/images/fl.png"
+            alt=""
+            class="details-ring"
+        />
+
+    </div>
+</section>
+
+<!-- Curved transition between second page and scratch page -->
+<div class="curved-transition">
+
+    <svg
+        viewBox="0 0 1440 140"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg">
+
+        <!-- BURGUNDY ABOVE THE CURVE -->
+        <path
+            class="burgundy-fill"
+            d="
+                M0 0
+                L1440 0
+                L1440 35
+
+                C1240 5 1090 15 930 65
+                C770 115 660 135 500 82
+                C340 30 180 5 0 35
+
+                Z
+            "
+        />
+
+        <!-- CREAM BELOW THE CURVE -->
+        <path
+            class="cream-fill"
+            d="
+                M0 35
+
+                C180 5 340 30 500 82
+                C660 135 770 115 930 65
+                C1090 15 1240 5 1440 35
+
+                L1440 140
+                L0 140
+
+                Z
+            "
+        />
+
+        <!-- SINGLE GOLD CURVE -->
+        <path
+            class="curve-border"
+            d="
+                M0 35
+
+                C180 5 340 30 500 82
+                C660 135 770 115 930 65
+                C1090 15 1240 5 1440 35
+            "
+        />
+
+    </svg>
+
+</div>
+
+
+
+
+    <section class="venue-section">
+        <div class="venue-container scroll-animate">
+            <img src="assests/images/SAVE.png" class="save-image" alt="Save The Date">
+            
+            <!-- Minimal Countdown Section -->
+            <div class="minimal-countdown" style="margin-bottom: 20px;">
+                <p style="font-family: 'Marquis', serif; font-style: italic; font-size: 1.9rem; color: var(--text-primary); margin-bottom: 15px;">Days to Go...</p>
+                <img
+    src="assests/images/divider.png"
+    class="countdown-divider"
+    alt=""
+    aria-hidden="true"
+>
+
+                <div class="timer" style="margin-top: 15px; gap: 20px;">
+                    <div class="time-block-minimal">
+                        <span id="days">00</span>
+                        <p>Days</p>
+                    </div>
+                    <div class="time-block-minimal">
+                        <span id="hours">00</span>
+                        <p>Hours</p>
+                    </div>
+                    <div class="time-block-minimal">
+                        <span id="minutes">00</span>
+                        <p>Minutes</p>
+                    </div>
+                    <div class="time-block-minimal">
+                        <span id="seconds">00</span>
+                        <p>Secs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Itinerary Section -->
+   
+
+    <!-- Venue Section -->
+     <!-- Venue / Events Section -->
+<section class="venue-section events-section">
+    <div class="venue-container scroll-animate">
+
+        <h2 class="venue-title">Wedding Celebrations</h2>
+
+        <div class="event-venue-list">
+
+            <!-- MEHENDI FUNCTION -->
+            <div class="event-venue-card">
+                <div class="event-venue-content">
+                    <p class="event-venue-label">MEHENDI</p>
+                    <div class="event-venue-divider"></div>
+                    <p class="event-venue-date">Friday, 18 December 2026</p>
+                    <p class="event-venue-time" style="font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 2px; color: #dfb776; margin-top: 8px;">
+                        MEHENDI FUNCTION
+                    </p>
+                </div>
+            </div>
+
+            <!-- WEDDING / NIKAH -->
+            <div class="event-venue-card">
+                <div class="event-venue-content">
+                    <p class="event-venue-label">NIKAH</p>
+                    <div class="event-venue-divider"></div>
+                    <p class="event-venue-date">Sunday, 20 December 2026</p>
+                    <p class="event-venue-time" style="font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 1.5px; color: #ead4ad; margin-top: 6px; margin-bottom: 6px;">
+                        (Chand : Rajab, 11th Hijira 1448)
+                    </p>
+                    <p class="event-venue-time" style="font-family: 'Cinzel', serif; font-size: 1rem; font-weight: 700; letter-spacing: 2px; color: #dfb776; margin-bottom: 14px;">
+                        NIKAH : 05:00 PM
+                    </p>
+                    <div class="event-venue-location">
+                        <iconify-icon icon="lucide:map-pin" class="location-icon" style="font-size: 1.4rem; color: #dfb776;"></iconify-icon>
+                        <div>
+                            <p class="location-title" style="font-size: 1.25rem; font-weight: 600; color: #fff8e9; margin-bottom: 4px;">@ AH PALACE</p>
+                            <p class="location-place" style="text-transform: uppercase; font-size: 0.85rem; line-height: 1.5; letter-spacing: 1px; color: #ead4ad;">
+                                Gandhi Nagar
+                            </p>
+                        </div>
+                    </div>
+                    <p style="font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-style: italic; color: #dfb776; margin-top: 14px; margin-bottom: 14px; letter-spacing: 0.5px;">
+                        Reception : After Nikah
+                    </p>
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&amp;query=AH+Palace+Gandhi+Nagar"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="map-link"
+                    >
+                        <span>View Location</span>
+                        <span class="map-arrow">↗</span>
+                    </a>
+                    <p class="map-hint">
+                        Tap to view location on Google Maps
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Best Wishes From -->
+        <div style="margin-top: 36px; padding: 22px 15px 5px; border-top: 1px solid rgba(234, 212, 173, 0.25);">
+            <p style="font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; color: #ead4ad; margin-bottom: 6px;">
+                With Love &amp; Best Wishes From:
+            </p>
+            <p style="font-family: 'Great Vibes', cursive; font-size: 1.85rem; color: #dfb776; letter-spacing: 1px;">
+                Relatives &amp; Friends
+            </p>
+        </div>
+
+    </div>
+</section>
+
+    <section class="rsvp-section" id="rsvpSection">
+        <div class="scroll-animate">
+            <p class="rsvp-eyebrow">A JOYFUL CELEBRATION</p>
+            <h2 class="rsvp-title">Kindly Respond</h2>
+            <p class="rsvp-sub">Your presence would make our day complete.</p>
+
+            <div class="rsvp-buttons">
+                <button type="button" class="rsvp-btn yes" id="rsvpYesBtn" aria-label="Yes, I will attend">
+                    <span class="btn-main">Yes</span>
+                    <span class="btn-sub">Joyfully Accept ✦</span>
+                </button>
+                <button type="button" class="rsvp-btn no" id="rsvpNoBtn" aria-label="No, I cannot attend">
+                    <span class="btn-main">No</span>
+                    <span class="btn-sub">Regretfully Decline</span>
+                </button>
+            </div>
+
+            <div class="rsvp-message" id="rsvpMessage" role="status" aria-live="polite"></div>
+            <p class="rsvp-note">With Love &amp; Best Wishes From: Relatives &amp; Friends</p>
+        </div>
+    </section>
+
+    <section class="thankyou-section">
+        <div class="thankyou-container scroll-animate">
+            <h3 class="thankyou-heading" style="font-family: 'Great Vibes', cursive; font-size: clamp(2.5rem, 6vw, 3.2rem); color: var(--text-primary, #610B14); margin-bottom: 15px; font-weight: normal; letter-spacing: 1px;">Thank You</h3>
+            <img src="assests/images/bl-fl.png" alt="Flower Ornament" class="bl" style="margin: 0 auto;">
+        </div>
+    </section>
+
+    <div class="branding-bar" style="background-color: var(--bg-color); padding: 25px 15px; text-align: center; border: none !important;">
+        <a href="https://www.instagram.com/leora.invite/" target="_blank" rel="noopener noreferrer"
+            style="text-decoration: none; color: var(--text-primary); font-family: 'Montserrat', sans-serif; font-size: 0.75rem; letter-spacing: 1.5px; opacity: 0.8;">
+            created with love - team.leora
+        </a>
+    </div>
+
+    <script src="script.js?v=7"></script>
+</body>
+
+</html>
+
